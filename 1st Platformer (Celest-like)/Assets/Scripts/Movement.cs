@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
 
 
         */
-        char_RB.velocity = new Vector2(direction.x * speed, direction.y * speed);
+        char_RB.velocity = new Vector2(direction.x * speed, direction.y * 0);
 
     }
 }
