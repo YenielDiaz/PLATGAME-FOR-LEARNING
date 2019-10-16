@@ -36,5 +36,12 @@ public class Movement : MonoBehaviour
     {
         char_RB.velocity = new Vector2(direction.x * speed, char_RB.velocity.y);
     }
+
+    public float getSpeed()
+    {
+        return speed;
+    }
 }   
+
+
 

@@ -170,6 +170,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8140475633558717981}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700243433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1838932931027391868, guid: 3b6672177242c5d49a1c41ab956b1990,
+    type: 3}
+  m_PrefabInstance: {fileID: 1838932930741920452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1700243443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700243433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f067628fed3f9b94dadf2c21f8d2e15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallGrab: 0
+  rb: {fileID: 0}
+  col: {fileID: 0}
+  climbSpeed: 5
 --- !u!1001 &1838932930741920452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,6 +262,11 @@ PrefabInstance:
     - target: {fileID: 285489089, guid: 3b6672177242c5d49a1c41ab956b1990, type: 3}
       propertyPath: slideSpeed
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838932931027391870, guid: 3b6672177242c5d49a1c41ab956b1990,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6672177242c5d49a1c41ab956b1990, type: 3}

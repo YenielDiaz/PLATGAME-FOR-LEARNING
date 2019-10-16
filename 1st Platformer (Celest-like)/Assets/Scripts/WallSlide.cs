@@ -18,7 +18,7 @@ public class WallSlide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (col.getOnWall() && !col.getOnGround())
+        if (((col.getOnRightWall() && rb.velocity.x > 0 ) || (col.getOnLeftWall() && rb.velocity.x < 0)) && !col.getOnGround())
         {
             wSlide();
         }
@@ -26,6 +26,18 @@ public class WallSlide : MonoBehaviour
 
     private void wSlide()
     {
-        rb.velocity = new Vector2(rb.velocity.x, -slideSpeed);
+        bool pushingWall = false;
+
+        if ((rb.velocity.x > 0 && col.getOnRightWall()) || (rb.velocity.x < 0 && col.getOnLeftWall()))
+        {
+            pushingWall = true;
+        }
+
+        float push = pushingWall ? 0 : rb.velocity.x;
+        // IF PUSHINGWALL TRUE, THEN PUSH = 0 ; ELSE PUSH = RB.VELOCITY.X
+        
+
+        rb.velocity = new Vector2(push, -slideSpeed);
+        
     }
 }
