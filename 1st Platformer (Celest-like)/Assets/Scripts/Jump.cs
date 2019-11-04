@@ -5,17 +5,18 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     private Rigidbody2D char_RB;
+    private WallFloorCollision col;
+    
+    [SerializeField] float jumpvelocity = 7;
 
-
-    [Range(1, 10)]
-    [SerializeField] float jumpvelocity = 10;
     private void Start()
     {
         char_RB = GetComponent<Rigidbody2D>();
+        col = GetComponent<WallFloorCollision>();
     }
     void FixedUpdate()
     {
-        if (Input.GetButtonDown ("Jump"))
+        if (col.getOnGround() && Input.GetButtonDown ("Jump"))
         {
             char_RB.velocity = new Vector2(char_RB.velocity.x, 0);
             

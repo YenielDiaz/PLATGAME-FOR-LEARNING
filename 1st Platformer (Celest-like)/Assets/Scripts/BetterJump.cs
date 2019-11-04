@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BetterJump : MonoBehaviour
-{
-    
+{    
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 2f;
 
@@ -26,11 +25,5 @@ public class BetterJump : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
 
         }
-
-
-
-
     }
-
-
 }

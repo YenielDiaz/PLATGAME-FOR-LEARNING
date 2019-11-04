@@ -25,7 +25,7 @@ public class WallGrab : MonoBehaviour
 
         if (wallGrab)
         {
-            rb.velocity = new Vector2(rb.velocity.x, y * climbSpeed);
+            rb.velocity = new Vector2(0, y * climbSpeed);
             rb.gravityScale = 0;
         }
         else

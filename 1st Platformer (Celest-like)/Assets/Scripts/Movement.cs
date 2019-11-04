@@ -12,8 +12,7 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     char_RB = GetComponent<Rigidbody2D>();
-        
+     char_RB = GetComponent<Rigidbody2D>();        
     }
 
     // Update is called once per frame
@@ -25,11 +24,6 @@ public class Movement : MonoBehaviour
         Vector2 direction = new Vector2(x, y);
 
         Walk(direction);
-
-
-
-
-
     }
 
     private void Walk(Vector2 direction)
